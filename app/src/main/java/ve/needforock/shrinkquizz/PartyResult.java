@@ -11,6 +11,7 @@ public class PartyResult extends PartyAnswer {
     }
 
     public String score(){
+
         return processing();
     }
 

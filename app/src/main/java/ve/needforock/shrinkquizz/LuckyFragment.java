@@ -1,10 +1,11 @@
 package ve.needforock.shrinkquizz;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,8 +54,24 @@ public class LuckyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 boolean answer = mood.isChecked();
-                Log.d("answer", String.valueOf(answer));
+                dialog(answer);
+
             }
         });
+    }
+
+    public void dialog (boolean answer){
+
+        AlertDialog.Builder alertDialogLucky= new AlertDialog.Builder(getActivity());
+        alertDialogLucky.setTitle("Tu estado de animo");
+        alertDialogLucky.setMessage(new LuckyResult(answer).luckyScore());
+        alertDialogLucky.setPositiveButton("yeah", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialogLucky.show();
+
     }
 }

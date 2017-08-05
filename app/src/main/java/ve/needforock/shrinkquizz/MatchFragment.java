@@ -1,9 +1,11 @@
 package ve.needforock.shrinkquizz;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +84,22 @@ public class MatchFragment extends Fragment {
             public void onClick(View v) {
                 int user = userSb.getProgress();
                 int lover = loverSb.getProgress();
+                showDialog(user,lover);
+
             }
         });
+    }
+
+    public void showDialog (int user, int lover){
+        AlertDialog.Builder alertDialog= new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle("Tipo de Match");
+        alertDialog.setMessage(new MatchResult(user,lover).score());
+        alertDialog.setPositiveButton("yeah", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 }
