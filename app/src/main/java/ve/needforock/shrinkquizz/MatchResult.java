@@ -10,19 +10,19 @@ public class MatchResult extends MatchAnswer {
         super(user, lover);
     }
 
-    public String score(){
-    return processing();
+    public String score() {
+        return processing();
     }
 
-    private String processing(){
+    private String processing() {
         int userAge = getUserAge();
         int loverAge = getLoverAge();
 
-        if (userAge>loverAge){
+        if (userAge > loverAge) {
             return "Te Gustan mas Jovenes";
-        }else if (userAge<loverAge){
+        } else if (userAge < loverAge) {
             return "Te gustan mayores";
-        }else {
+        } else {
             return "Pareja Perfecta";
         }
     }

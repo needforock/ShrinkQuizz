@@ -60,9 +60,9 @@ public class LuckyFragment extends Fragment {
         });
     }
 
-    public void dialog (boolean answer){
+    public void dialog(boolean answer) {
 
-        AlertDialog.Builder alertDialogLucky= new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder alertDialogLucky = new AlertDialog.Builder(getActivity());
         alertDialogLucky.setTitle("Tu estado de animo");
         alertDialogLucky.setMessage(new LuckyResult(answer).luckyScore());
         alertDialogLucky.setPositiveButton("yeah", new DialogInterface.OnClickListener() {

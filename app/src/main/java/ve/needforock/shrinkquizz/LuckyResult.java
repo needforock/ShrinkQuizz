@@ -10,25 +10,25 @@ public class LuckyResult extends LuckyAnswer {
         super(choice);
     }
 
-    public String luckyScore(){
+    public String luckyScore() {
         return processingChoice() + processingDay();
     }
 
-    private String processingChoice(){
+    private String processingChoice() {
         boolean choice = getChoice();
-        if (choice){
+        if (choice) {
             return "Esa es la Actitud";
-        }else{
+        } else {
             return "Animate";
         }
 
     }
 
-    private String processingDay(){
+    private String processingDay() {
         boolean luckyDay = getLuckyDay();
-        if (luckyDay){
+        if (luckyDay) {
             return " y es tu dia de suerte!";
-            }else {
+        } else {
             return " vendran mejores tiempos :)";
         }
     }

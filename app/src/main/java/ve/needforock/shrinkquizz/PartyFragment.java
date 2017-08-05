@@ -65,8 +65,8 @@ public class PartyFragment extends Fragment {
         });
     }
 
-    public void showDialog (String answer){
-        AlertDialog.Builder alertDialog= new AlertDialog.Builder(getActivity());
+    public void showDialog(String answer) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle("Nivel de Fiesta");
         alertDialog.setMessage(new PartyResult(answer).score());
         alertDialog.setPositiveButton("yeah", new DialogInterface.OnClickListener() {

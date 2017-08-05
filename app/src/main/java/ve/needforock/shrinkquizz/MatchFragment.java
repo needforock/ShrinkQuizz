@@ -24,7 +24,7 @@ public class MatchFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static MatchFragment newInstance(){
+    public static MatchFragment newInstance() {
         return new MatchFragment();
     }
 
@@ -84,16 +84,16 @@ public class MatchFragment extends Fragment {
             public void onClick(View v) {
                 int user = userSb.getProgress();
                 int lover = loverSb.getProgress();
-                showDialog(user,lover);
+                showDialog(user, lover);
 
             }
         });
     }
 
-    public void showDialog (int user, int lover){
-        AlertDialog.Builder alertDialog= new AlertDialog.Builder(getActivity());
+    public void showDialog(int user, int lover) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle("Tipo de Match");
-        alertDialog.setMessage(new MatchResult(user,lover).score());
+        alertDialog.setMessage(new MatchResult(user, lover).score());
         alertDialog.setPositiveButton("yeah", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

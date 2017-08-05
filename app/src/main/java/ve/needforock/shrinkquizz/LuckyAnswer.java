@@ -23,7 +23,7 @@ public class LuckyAnswer {
         return luckyDay;
     }
 
-    private class LuckyDate{
+    private class LuckyDate {
 
         private boolean randomBooleanDate() {
 
@@ -31,9 +31,9 @@ public class LuckyAnswer {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd");
             int day = Integer.parseInt(simpleDateFormat.format(date));
 
-            if (day%5 == 0){
+            if (day % 5 == 0) {
                 return true;
-            }else
+            } else
                 return false;
 
         }

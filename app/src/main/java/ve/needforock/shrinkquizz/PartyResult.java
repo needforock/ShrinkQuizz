@@ -10,19 +10,19 @@ public class PartyResult extends PartyAnswer {
         super(answer);
     }
 
-    public String score(){
+    public String score() {
 
         return processing();
     }
 
-    private String processing(){
+    private String processing() {
         String answer = getAnswer();
-        if (answer.contains("Cinco")){
-        return "eres un nino";
+        if (answer.contains("Cinco")) {
+            return "eres un nino";
 
-        } else if (answer.contains("Diez")){
+        } else if (answer.contains("Diez")) {
 
-        return "buena";
+            return "buena";
         } else {
             return "busca ayuda";
 
